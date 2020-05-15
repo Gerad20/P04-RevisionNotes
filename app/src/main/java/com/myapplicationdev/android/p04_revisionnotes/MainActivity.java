@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button insertBtn;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
                 db.insertNote(content,ChosenNumber);
                 db.close();
+                Toast.makeText(getApplicationContext(),"Inserted",Toast.LENGTH_LONG).show();
 
             }
         });
